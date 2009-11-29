@@ -4,12 +4,12 @@
 
 use warnings;
 use strict;
+use WikiFuncs;
+use TextFuncs;
 
 package Wikipedia;
 use base qw( Bot::BasicBot );
 use Data::Dumper;
-use WikiFuncs;
-use TextFuncs;
 
 my $version = "1.0";
 
@@ -24,7 +24,7 @@ sub said {
 	my $channel    = $info->{channel};
 
    if($text =~ /\[\[\[(.*)\]\]\]/i){
-      return "$1";
+      return WPB::lookup($1);
    }
 
    	return;
