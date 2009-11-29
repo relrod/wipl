@@ -8,6 +8,8 @@ use strict;
 package Wikipedia;
 use base qw( Bot::BasicBot );
 use Data::Dumper;
+use WikiFuncs;
+use TextFuncs;
 
 my $version = "1.0";
 
